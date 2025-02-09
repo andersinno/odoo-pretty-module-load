@@ -1,0 +1,15 @@
+# Python cache or object files
+__pycache__
+*.py[cod]
+
+# Python packaging artifacts
+*.egg-info
+/build
+/dist
+
+# Pyenv version file
+.python-version
+
+# Cache dirs/files of various tools
+.ruff_cache
+.mypy_cache

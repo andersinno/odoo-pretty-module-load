@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "odoo-pretty-module-load"
+readme = "README.rst"
+description = "Pretty Module Loader - Odoo Addon"
+authors = [{name="Anders Innovations", email="support@anders.fi"}]
+license = {text="LGPLv3+"}
+requires-python = ">=3.10"
+dependencies = [
+    "click-odoo-contrib",
+]
+dynamic = ["version"]
+classifiers = [
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Utilities",
+    "Framework :: Odoo",
+    "Environment :: Console",
+    "Environment :: Plugins",
+    "Typing :: Typed",
+]
+
+[project.urls]
+homepage = "https://anders.fi"
+source = "https://github.com/andersinno/odoo-pretty-module-load"
+issues = "https://github.com/andersinno/odoo-pretty-module-load/issues"
+changelog = "https://github.com/andersinno/odoo-pretty-module-load/blob/main/ChangeLog.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/odoo"]
+
+[tool.hatch.version]
+path = "src/odoo/addons/pretty_module_load/__manifest__.py"
+pattern = "[\"]version[\"]: [\"](?P<version>[^\"]+)\""

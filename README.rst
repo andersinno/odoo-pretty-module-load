@@ -1,0 +1,1 @@
+src/odoo/addons/pretty_module_load/README.rst
